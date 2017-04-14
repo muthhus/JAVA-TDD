@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.microservice.pattern.sample</groupId>
-	<artifactId>Java Testing Microservices</artifactId>
+	<artifactId>JAVA-TDD</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
