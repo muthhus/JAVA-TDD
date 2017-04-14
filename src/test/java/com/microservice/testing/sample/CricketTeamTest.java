@@ -42,15 +42,15 @@ public class CricketTeamTest {
 	
 //	 Multiple params testing
 	
-//	private static final Object[] nbOfMatchesAndPts(){
-//		
-//		return new Object[]{
-//				new Object[]{9, 18},
-//				new Object[]{10, 20},
-//				new Object[]{11, 22},
-//				new Object[]{12, 24}
-//		};
-//	}
+	private static final Object[] nbOfMatchesAndPts(){
+		
+		return new Object[]{
+				new Object[]{9, 18},
+				new Object[]{10, 20},
+				new Object[]{11, 22},
+				new Object[]{12, 24}
+		};
+	}
 	
 	private static final Object[] nbOfMatchesAndPtsWithDollarSign(){
 		return $(
