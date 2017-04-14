@@ -42,7 +42,7 @@ public class CricketTeamTest {
 	@Parameters(method="nbOfMatchesAndPts")
 	public void constructorShouldSetTeamPts(int match, int teamPts){
 		CricketTeam team = new CricketTeam(match, teamPts);
-		assertEquals(match, team.getMatch);
+		assertEquals(match, team.getMatch());
 		assertEquals(teamPts, team.getTeamPts());
 	}
 	
