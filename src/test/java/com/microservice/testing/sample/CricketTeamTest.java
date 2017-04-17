@@ -16,7 +16,6 @@ public class CricketTeamTest {
 	private static final  int TEAM_POINTS = 22;
 	
 
-
 	@Test
 	public void constructorShouldSetTeamPts() {
 		CricketTeam team = new CricketTeam(TEAM_POINTS);
