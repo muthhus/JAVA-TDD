@@ -23,8 +23,8 @@ public class PlayerTest {
 	private ArrayList<String> arrPlayerName = null;
 
 	@BeforeClass
-	public static void initPlayerTest() {
-		System.out.println("Starting Player Object Test...");
+	public static void setUp() {
+		System.out.println("Initial Setup");
 
 	}
 
@@ -55,11 +55,24 @@ public class PlayerTest {
 	}
 
 	@Test
-	public void checkPlayerList() {
+	public void verifyListOfPlayers() {
 		objPlayer.setLstPlayers(arrPlayerName);
 
 		assertThat(objPlayer.getLstPlayers(), is(arrPlayerName));
+
+	}
+
+	@Test
+	public void verifyListContainsTheName() {
+		objPlayer.setLstPlayers(arrPlayerName);
+
 		assertThat(objPlayer.getLstPlayers(), hasItems("Aswin"));
+
+	}
+
+	@Test
+	public void verifyListSize() {
+		objPlayer.setLstPlayers(arrPlayerName);
 		assertThat(objPlayer.getLstPlayers().size(), is(3));
 
 	}
@@ -70,8 +83,9 @@ public class PlayerTest {
 	}
 
 	@AfterClass
-	public static void endPlayerTest() {
-		System.out.println("Ending Player Object Test..");
+	public static void Completed() {
+		System.out.println("Completed");
+
 	}
 
 }
