@@ -30,7 +30,7 @@ public class PlayerTest {
 
 	@Before
 	public void setPlayerConstructor() {
-		System.out.println("This method called execute before every method run ..");
+		System.out.println("Before...");
 		objPlayer = new Player();
 		arrPlayerName = new ArrayList<>();
 		arrPlayerName.add("Dhoni");
@@ -79,7 +79,7 @@ public class PlayerTest {
 
 	@After
 	public void executeAfterEachMethod() {
-		System.out.println("This method called/execute after every method run ..");
+		System.out.println("After ..");
 	}
 
 	@AfterClass
