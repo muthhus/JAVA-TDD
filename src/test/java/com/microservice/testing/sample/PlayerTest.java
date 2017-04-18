@@ -17,62 +17,61 @@ import org.junit.Test;
 import org.mockito.InjectMocks;
 
 public class PlayerTest {
-	
-	@InjectMocks
+
 	private Player objPlayer;
-	
+
 	private ArrayList<String> arrPlayerName = null;
-	
+
 	@BeforeClass
-	public static  void initPlayerTest(){
+	public static void initPlayerTest() {
 		System.out.println("Starting Player Object Test...");
+
 	}
-	
+
 	@Before
-	public void setPlayerConstructor(){
+	public void setPlayerConstructor() {
 		System.out.println("This method called execute before every method run ..");
-	}
-	
-	@Test
-	public void constructorShouldBeSetWithParams(){
-		System.out.println("Testing Player");	
-		
 		objPlayer = new Player();
-		objPlayer.setAge(31);
-		objPlayer.setName("Dhoni");
-		
-		assertEquals(31,objPlayer.getAge());
-		assertEquals("Dhoni", objPlayer.getName());
-		
-		
-	}
-	
-	@Test
-	public void checkPlayerList(){
-		ArrayList<String> arrPlayerName = new ArrayList<>();
+		arrPlayerName = new ArrayList<>();
 		arrPlayerName.add("Dhoni");
 		arrPlayerName.add("Jadeja");
 		arrPlayerName.add("Aswin");
-		
-		objPlayer = new Player();
+	}
+
+	@Test
+	public void verifyPlayerAge() {
+		objPlayer.setAge(31);
+		assertEquals(31, objPlayer.getAge());
+
+	}
+
+	@Test
+	public void verifyPlayerName() {
+		System.out.println("Testing Player");
+		objPlayer.setName("Dhoni");
+
+		assertEquals("Dhoni", objPlayer.getName());
+
+	}
+
+	@Test
+	public void checkPlayerList() {
 		objPlayer.setLstPlayers(arrPlayerName);
-		
+
 		assertThat(objPlayer.getLstPlayers(), is(arrPlayerName));
 		assertThat(objPlayer.getLstPlayers(), hasItems("Aswin"));
 		assertThat(objPlayer.getLstPlayers().size(), is(3));
-		
+
 	}
-	
 
 	@After
-	public void executeAfterEachMethod(){
+	public void executeAfterEachMethod() {
 		System.out.println("This method called/execute after every method run ..");
 	}
-	
+
 	@AfterClass
-	public static void endPlayerTest(){
+	public static void endPlayerTest() {
 		System.out.println("Ending Player Object Test..");
 	}
-	
 
 }
