@@ -1,13 +1,16 @@
 package com.microservice.testing.sample;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Player {
 
 	private int age;
 	private String name;
 	
-	private ArrayList<String> lstPlayers;
+	private List<Player> lstPlayers;
+	private ArrayList<String> lstStrPlayer;
+	
 
 	public Player() {
 
@@ -34,13 +37,23 @@ public class Player {
 		this.name = name;
 	}
 
-	public ArrayList<String> getLstPlayers() {
+	public List<Player> getLstPlayers() {
 		return lstPlayers;
 	}
 
-	public void setLstPlayers(ArrayList<String> lstPlayers) {
-		this.lstPlayers = lstPlayers;
+	public void setLstPlayers(List<Player> lstPlayer) {
+		this.lstPlayers = lstPlayer;
 	}
+
+	public ArrayList<String> getLstStrPlayer() {
+		return lstStrPlayer;
+	}
+
+	public void setLstStrPlayer(ArrayList<String> lstStrPlayer) {
+		this.lstStrPlayer = lstStrPlayer;
+	}
+
+
 	
 	
 

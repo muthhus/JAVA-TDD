@@ -18,9 +18,9 @@ import org.mockito.InjectMocks;
 
 public class PlayerTest {
 
-	private Player objPlayer;
+	Player objPlayer;
 
-	private ArrayList<String> arrPlayerName = null;
+	ArrayList<String> arrPlayerName = null;
 
 	@BeforeClass
 	public static void setUp() {
@@ -56,24 +56,24 @@ public class PlayerTest {
 
 	@Test
 	public void verifyListOfPlayers() {
-		objPlayer.setLstPlayers(arrPlayerName);
+		objPlayer.setLstStrPlayer(arrPlayerName);
 
-		assertThat(objPlayer.getLstPlayers(), is(arrPlayerName));
+		assertThat(objPlayer.getLstStrPlayer(), is(arrPlayerName));
 
 	}
 
 	@Test
 	public void verifyListContainsTheName() {
-		objPlayer.setLstPlayers(arrPlayerName);
-
-		assertThat(objPlayer.getLstPlayers(), hasItems("Aswin"));
+		objPlayer.setLstStrPlayer(arrPlayerName);
+		
+		assertThat(objPlayer.getLstStrPlayer(), hasItems("Dhoni", "Jadeja", "Aswin"));
 
 	}
 
 	@Test
 	public void verifyListSize() {
-		objPlayer.setLstPlayers(arrPlayerName);
-		assertThat(objPlayer.getLstPlayers().size(), is(3));
+		objPlayer.setLstStrPlayer(arrPlayerName);
+		assertThat(objPlayer.getLstStrPlayer().size(), is(3));
 
 	}
 

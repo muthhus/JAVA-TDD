@@ -1,11 +1,13 @@
 package com.microservice.testing.sample;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class CricketTeam {
 	
 	private int teamPts;
 	private int match;
+	
+	List<String> lstTeamPlayer;
 	
 	public CricketTeam(int teamPts) {
 		this.teamPts = teamPts;
@@ -31,6 +33,14 @@ public class CricketTeam {
 
 	public void setMatch(int match) {
 		this.match = match;
+	}
+	
+	public List<String> getLstTeamPlayer() {
+		return lstTeamPlayer;
+	}
+
+	public void setLstTeamPlayer(List<String> lstTeamPlayer) {
+		this.lstTeamPlayer = lstTeamPlayer;
 	}
 	
 	
