@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class CricketTeamImpl {
 
-	private PlayerRepository playerRepository;
+	private PlayerService playerRepository;
 
 	private Player objPlayer;
 
@@ -14,7 +14,7 @@ public class CricketTeamImpl {
 
 	private Map<String, List<Player>> mapTeam;
 
-	public CricketTeamImpl(PlayerRepository playerRepository) {
+	public CricketTeamImpl(PlayerService playerRepository) {
 		this.playerRepository = playerRepository;
 	}
 
