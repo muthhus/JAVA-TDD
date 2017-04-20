@@ -29,7 +29,7 @@ public class CricketTeamImplTest {
 
 	@Test
 	public void getTeamNameAndPlayersTest() {
-		Map<String, List<Player>> map = new HashMap<String, List<Player>>();
+		Map<String, List<Player>> map = new HashMap<>();
 		map.put("Chennai", objPlayer.getLstPlayers());
 		
 		when(playerService.getTeamNameAndPlayers()).thenReturn(map);
@@ -41,7 +41,7 @@ public class CricketTeamImplTest {
 	
 	@Test
 	public void getTeamNameAndPlayersBDDTest() {
-		Map<String, List<Player>> map = new HashMap<String, List<Player>>();
+		Map<String, List<Player>> map = new HashMap<>();
 		map.put("Chennai", objPlayer.getLstPlayers());
 		
 		//When

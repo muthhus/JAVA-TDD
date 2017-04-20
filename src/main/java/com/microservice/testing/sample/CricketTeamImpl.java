@@ -23,7 +23,7 @@ public class CricketTeamImpl {
 
 	public Map<String, List<Player>> getTeamNameAndPlayers() {
 		lstPlayer = new ArrayList<Player>();
-		mapTeam = new HashMap<String,List<Player>>();
+		mapTeam = new HashMap<>();
 
 		objPlayer = new Player();
 		objPlayer.setName("Dhoni");
