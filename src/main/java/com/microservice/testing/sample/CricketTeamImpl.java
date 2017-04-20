@@ -1,8 +1,10 @@
 package com.microservice.testing.sample;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 public class CricketTeamImpl {
 
@@ -12,7 +14,7 @@ public class CricketTeamImpl {
 
 	private List<Player> lstPlayer;
 
-	private Map<String, List<Player>> mapTeam;
+	Map<String, List<Player>> mapTeam;
 
 	public CricketTeamImpl(PlayerService playerRepository) {
 		this.playerRepository = playerRepository;
@@ -21,6 +23,7 @@ public class CricketTeamImpl {
 
 	public Map<String, List<Player>> getTeamNameAndPlayers() {
 		lstPlayer = new ArrayList<Player>();
+		mapTeam = new HashMap<String,List<Player>>();
 
 		objPlayer = new Player();
 		objPlayer.setName("Dhoni");
@@ -47,9 +50,9 @@ public class CricketTeamImpl {
 		lstPlayer.add(objPlayer);
 
 		objPlayer.setLstPlayers(lstPlayer);
-
-		mapTeam.put("Chennai", lstPlayer);
-
+		
+		mapTeam.put("Chennai", objPlayer.getLstPlayers());
+		
 		return mapTeam;
 	}
 
