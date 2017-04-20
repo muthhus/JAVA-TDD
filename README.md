@@ -31,6 +31,12 @@ AssertJ(Readable) - What the test is about and also what the expected result sho
 10. assertArrayEquals
 
 Mockito - It allows the creating of test double objects (mock objects) with a clean and Simple API.There are four types of test doubles(Dummies, fakes, stubs & mocks).
+1. @Mock
+2. @InjectMocks
+3. when - thenReturn
+4. given - willReturn
+5. verify
+6. @Rule
 
 WireMock - Simulator for HTTP/S based APIs.
 
