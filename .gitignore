@@ -1,1 +1,6 @@
+.project
+.classpath
+.DS_Store
+mvnw
+mvnw.cmd
 /target/
