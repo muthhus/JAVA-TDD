@@ -1,4 +1,4 @@
-# Testing Microservices using Java
+# Testing Microservices using Junit, Mockito & WireMock
   Micorservices enable you to isolate and scale smaller pieces of your application, rather than the entire application. Tehre are two types of unit test.
   
   1. Solitary Unit Tests(REST API, Peristence ORM & Remote Resources) - It focus on testing the unit or work in an isolated and controlled way, and the collaborators of the unit are replaced by test doubles or mocks.
